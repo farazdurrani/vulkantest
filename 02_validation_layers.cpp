@@ -15,7 +15,7 @@ const std::vector<const char*> validationLayers = {
 };
 
 #ifdef NDEBUG
-const bool enableValidationLayers = true;
+const bool enableValidationLayers = false;
 #else
 const bool enableValidationLayers = true;
 #endif
