@@ -10,7 +10,7 @@
 
 int main() {
 #ifdef NDEBUG
-	std::cout << "NDEBUG is enabled" << std::endl;
+	std::cout << "main.cpp NDEBUG is enabled" << std::endl;
 #endif
 
     glfwInit();

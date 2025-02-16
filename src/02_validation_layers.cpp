@@ -201,7 +201,7 @@ int main() {
     std::string something {"Some text"};
     std::cout << something << std::endl;
 #ifdef NDEBUG
-	std::cout << "NDEBUG is enabled" << std::endl;
+	std::cout << "validation layer: NDEBUG is enabled" << std::endl;
 	std::cout << enableValidationLayers << std::endl;
 #endif
     HelloTriangleApplication app;

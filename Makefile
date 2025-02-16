@@ -1,8 +1,8 @@
-CFLAGS = -std=c++17 -O2 -DNDEBUG
+CFLAGS = -std=c++17 -g -O3 -DNDEBUG
 LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 
-VulkanTest: ../../07_image_views.cpp
-	g++ $(CFLAGS) -o VulkanTest ../../07_image_views.cpp $(LDFLAGS)
+VulkanTest: ../../src/19_vertex_buffer.cpp
+	g++ $(CFLAGS) -o VulkanTest ../../src/19_vertex_buffer.cpp $(LDFLAGS)
 
 .PHONY: test clean
 
