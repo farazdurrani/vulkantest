@@ -1,2 +1,2 @@
-/usr/local/bin/glslc 18_shader_vertexbuffer.vert -o vert.spv
-/usr/local/bin/glslc 18_shader_vertexbuffer.frag -o frag.spv
+/usr/local/bin/glslc 22_shader_ubo.vert -o vert.spv
+/usr/local/bin/glslc 22_shader_ubo.frag -o frag.spv
