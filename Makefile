@@ -1,10 +1,11 @@
-STB_INCLUDE_PATH = /home/faraz/stb
+STB_INCLUDE_PATH = /home/faraz/libraries/stb
+TINYOBJ_INCLUDE_PATH = /home/faraz/libraries/tinyobjloader
 
-CFLAGS = -std=c++17 -I$(STB_INCLUDE_PATH) -g -O3 -DNDEBUG
+CFLAGS = -std=c++17 -I$(STB_INCLUDE_PATH) -I$(TINYOBJ_INCLUDE_PATH) -g -O3 -DNDEBUG
 LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 
-VulkanTest: src/26_texture_mapping.cpp
-	g++ $(CFLAGS) -o VulkanTest src/26_texture_mapping.cpp $(LDFLAGS)
+VulkanTest: ../../src/30_multisampling.cpp
+	g++ $(CFLAGS) -o VulkanTest ../../src/30_multisampling.cpp $(LDFLAGS)
 
 .PHONY: test clean
 
