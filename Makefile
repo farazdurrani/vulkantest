@@ -1,16 +1,19 @@
-TINYOBJ_INCLUDE_PATH = /home/faraz/libraries/tinyobjloader
-STB_INCLUDE_PATH = /home/faraz/libraries/stb
+LOCAL_VK_ENGINE_PATH = src/vk_engine.h #-I$(LOCAL_VK_ENGINE_PATH)
 
-CFLAGS = -std=c++20 -I$(STB_INCLUDE_PATH) -I$(TINYOBJ_INCLUDE_PATH) -g -O3 -DNDEBUG
+CFLAGS = -std=c++20 -g -O3 -DNDEBUG
 LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 
-VulkanTest: ../../src/30_multisampling.cpp
-	g++ $(CFLAGS) -o VulkanTest ../../src/30_multisampling.cpp $(LDFLAGS)
-
-.PHONY: test clean
-
-test: VulkanTest
+all: VulkanTest
 	./VulkanTest
 
+VulkanTest: main.o vk_engine.o
+	g++ $(CFLAGS) -o VulkanTest main.o vk_engine.o $(LDFLAGS)
+
+main.o: src/main.cpp src/vk_engine.h
+	g++ $(CFLAGS) -c src/main.cpp -o main.o
+
+vk_engine.o: src/vk_engine.cpp src/vk_engine.h
+	g++ $(CFLAGS) -c src/vk_engine.cpp
+
 clean:
-	rm -f VulkanTest
+	rm -f *.o VulkanTest
