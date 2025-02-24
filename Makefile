@@ -5,7 +5,7 @@ LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 
 all: VulkanTest
 	./VulkanTest
-	echo "i dont know"
+	@echo "test message"
 
 VulkanTest: main.o vk_engine.o
 	g++ $(CFLAGS) -o VulkanTest main.o vk_engine.o $(LDFLAGS)

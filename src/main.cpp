@@ -12,8 +12,5 @@ int main(int argc, char* argv[])
 	
 	engine.run();
 
-	SirDeleteMe okay;
-	okay.sir();
-
 	return 0;
 }

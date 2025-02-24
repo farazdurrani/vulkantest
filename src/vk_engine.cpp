@@ -19,9 +19,3 @@ void VulkanEngine::init_vulkan()
 {
 	std::cout << "from vulkanengine::init_vulkan!\n";
 }
-
-void SirDeleteMe::sir(){
-	std::cout << "from vk_types::SirDeleteMe!\n";
-}
-
-

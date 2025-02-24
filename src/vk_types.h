@@ -24,12 +24,6 @@
 #include <glm/vec3.hpp>
 //< intro 
 
-class SirDeleteMe {
-public:
-	void sir();
-};
-
-
 // we will add our main reusable types here
 struct AllocatedImage {
     VkImage image;
