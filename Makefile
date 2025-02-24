@@ -5,14 +5,15 @@ LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 
 all: VulkanTest
 	./VulkanTest
+	echo "i dont know"
 
 VulkanTest: main.o vk_engine.o
 	g++ $(CFLAGS) -o VulkanTest main.o vk_engine.o $(LDFLAGS)
 
-main.o: src/main.cpp src/vk_engine.h
-	g++ $(CFLAGS) -c src/main.cpp -o main.o
+main.o: src/main.cpp
+	g++ $(CFLAGS) -c src/main.cpp
 
-vk_engine.o: src/vk_engine.cpp src/vk_engine.h
+vk_engine.o: src/vk_engine.cpp
 	g++ $(CFLAGS) -c src/vk_engine.cpp
 
 clean:
