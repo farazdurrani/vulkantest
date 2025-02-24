@@ -1,4 +1,5 @@
 #include "vk_engine.h"
+#include "vk_types.h"
 #include <iostream>
 
 int main(int argc, char* argv[])
@@ -10,6 +11,9 @@ int main(int argc, char* argv[])
 	engine.init();	
 	
 	engine.run();
+
+	SirDeleteMe okay;
+	okay.sir();
 
 	return 0;
 }

@@ -1,5 +1,6 @@
 ﻿
 #include "vk_engine.h"
+#include "vk_types.h"
 #include <iostream>
 
 void VulkanEngine::init()
@@ -17,6 +18,10 @@ void VulkanEngine::run()
 void VulkanEngine::init_vulkan()
 {
 	std::cout << "from vulkanengine::init_vulkan!\n";
+}
+
+void SirDeleteMe::sir(){
+	std::cout << "from vk_types::SirDeleteMe!\n";
 }
 
 
